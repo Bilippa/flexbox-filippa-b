@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+        <title> Flexbox </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width", initial-scale=1>
+<!--charset lets the web reader know how to read the code. UTF-8 is one of the most commonly used.
+the viewport, content and initial-scale are to let the browser know how the visuals of the page wil work. How zoomed in it will be when
+first loaded (initial-scale=1), what widths it should be based off between devices. Aka makes the page responsive.-->
+  </head>
+  <body>
+      <header>
+        <img src="img/nendoroid-logo-removebg-preview.png">
+          <h1> Nendoroid </h1>
+      </header>
+        <ul>
+            <li><a href="index.html"> Home </a></li>
+            <li><a href="products.html"> Products </a></li>
+            <li><a href="about.html"> About Us </a></li>
+            <li><a href="contact.html"> Contact </a></li>
+            <li><a href="documentation.html"> Documentation </a></li>
+             <!-- The <a> tag within the listing tags allows us to link to our other pages.-->
+        </ul>
+    <h2> Documentation </h2>
+    <ol>
+    <li> The external CSS is not applying to HTML. Suspected reason: stylesheet link is incorrectly placed or the source is incorrect.
+        I had only written the source as "style.css" not "css/style.css"! 
+    </li>
+    <br>
+    <li> Background color of body tag was not changing to red via background-color: red;. This was because I had written
+        ".body" instead of "body" as the tag reference in the stylesheet. The background color was set to red simply to visually
+        see if the css was working.
+    </li>
+    <br>
+    <li> Currently trying to apply the flexbox that is shown <a href="https://tobiasahlin.com/blog/common-flexbox-patterns/#3x3-grid" id="here">here</a> for the 3x3 grid.
+        The margins and padding are applying but not the horisontal placing of the products.
+        <br>
+        As it turns out the entire .container in css wasn't applying because I had written the class in the flexbox container as "containter"
+        instead of container, simply put, this was all because of a spelling mistake. It now works though!
+    </li>
+    <br>
+    <li> The flexbox aspect of the product divs and images within said divs are not going as planned. I've given the images set width and
+        height with the pixel unit, this making it unresponsive. I thought this would be ok seeing as they are in divs with flexwrap.
+        However, the left and right borders of the divs wrap after reaching the width of the image, meaning they disappear before wrapping.
+        I want the entire div to wrap once it's reached a certain margin width outside of the images. 
+        <br> I managed to somewhat solve the problem by adding padding (in pixels!! not percentage, percentage makes the
+        element relative which seems to cancel out the properties of flexwrap.) to the img element.
+    </li>
+    <br>
+    <li> I was testing different flex basis percentages and now the 32% that supposedly should allow 3 items to lay beside each other 
+        horizontally no longer shows 3 columns but instead 2. I managed to restore the 3 columns but to do so I had to set flexbasis to 29%
+    instead of 32%. I have now figured out (or I believe I have) that this was because the divs that were set to 32% also had padding which
+    added to the size of the div hence going outside tthe 32% and triggering the flexwrap. I will be leaving the flexbasis at 28% because 
+    that is the width I feel looks the most visually pleasing, and this also allows me to add that padding which makes it look less cramped.
+    </li>
+    <br>
+    <li> Having the justify-content attribute set with the space-between value within the main product container did not give me the wanted 
+        layout, I mixed it up with space-around. Therefore I have now set it to space-around instead, to make it look nicer when the browser
+        is resized.
+    </li>
+    </ol>
+    <div class="footer">
+        <p> All rights to products and product names viewed on this website go to Good Smile Company. This website is not for commercial use. </p>
+    </div>
+  </body>
+</html>

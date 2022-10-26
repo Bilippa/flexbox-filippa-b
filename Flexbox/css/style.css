@@ -1,0 +1,234 @@
+header {
+    display: flex;
+    background-color: rgb(183, 150, 245);
+    margin-top: -10px;
+    margin-left: -8px;
+    width: 102%;
+    height: 75px;
+    position: sticky;
+    align-items: center;
+}
+header > img {
+    width: 65px;
+    height: 65px;
+    
+}
+header > h1 {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-left: 10px;
+
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+}
+/* We do not want the dots infront of our navigation link. */
+
+li > ul{
+    display: inline;
+}
+
+a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    font-weight: bold;
+    font-size:large
+}
+
+a:hover {
+    color:rgb(183, 150, 245);
+}
+
+h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    margin: 50px;
+}
+/* Making the li elements inline elements allows us to have a horizontal bar. */
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+/* Container is being set to flex to be able to apply the wanted flexbox layout.
+Wrap adjusts the items incase the browser is resized.
+Justify-content tells us that the items within the flex container need to be evenly distributed with space inbetween them. */
+
+.container > div {
+    flex: 0 28%;
+    height: 500px;
+    margin: 1%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    background-color: rgb(183, 150, 245);
+    box-shadow: -5px 5px 0px rgb(167, 167, 167);
+}
+/* Here I'm specifying the divs inside the flex container without having to give them a seperate classname. 
+The flex grow is 0 (this is found within the flex attribute, meaning the items will not expand.
+The flex basis is 32% which tells us the flexbox will have 3 items aligned horizontally. 
+The margin is simply there to make the page feel less cramped, adds space between the divs.*/
+
+.container > div > a > img {
+    width: 265px;
+    height: 365px;
+    display: block;
+    margin: auto;
+    padding: 15px 15px 0px 15px;
+}
+
+/* We center the images within their respective divs by making them into block instead of inline elements which then allows
+us to align them in the center by setting margin to auto */
+
+.container > div> h3 {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0px 10px 10px 10px;
+}
+/* The text within all h3 tags will be in font Verdana. */
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#here {
+    font-size: medium;
+    font-weight: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+li {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 100px;
+    background-color: rgb(183, 150, 245);
+    height: 600px;
+}
+
+img {
+    width: 400px;
+    height: 550px;
+    margin: 20px;
+}
+
+.text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 600px;
+    padding: 0% 2% 2% 2%;
+    
+}
+
+.introduction {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 2%;
+    background-color: rgb(183, 150, 245);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.intro-img {
+    flex-basis: 350px;
+    margin: 20px;
+}
+
+.intro-h3 {
+    flex-grow: 3;
+    align-self: center;
+    text-align: center;
+    font-size: 40px;
+}
+
+.intro-p {
+    flex-basis: 350px;
+    line-height: 27px;
+    margin: 20px;
+}
+
+.container-about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 25px;
+    row-gap: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.about-1 {
+    width: 45%;
+    text-align: center;
+    background-color: rgb(183, 150, 245);
+    padding: 20px;
+}
+
+.about-2 {
+    width: 45%;
+    text-align: center;
+    background-color: rgb(183, 150, 245);
+    padding: 20px;
+}
+
+.about-3 {
+    width: 100%;
+    text-align: center;
+    background-color: rgb(183, 150, 245);
+    padding: 20px;
+}
+
+@keyframes logo {
+    0% { left: 0px; transform: rotate(0deg);}
+    25% {left: 500px; transform: rotate(15deg);}
+    75% {left: -500px; transform: rotate(-15deg);}
+    100% {left: 0px; transform: rotate(0deg);}
+}
+
+.about-3 > img {
+    width: 150px;
+    height: 150px;
+    animation-name: logo;
+    animation-duration: 17s;
+    position: relative;
+    animation-iteration-count: 100;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(183, 150, 245);
+    margin: 100px;
+}
+
+.contact-img > img{
+    width: 400px;
+    height: 400px;
+}
+
+.contact-img {
+    margin: 20px;
+    width: 40%;
+}
+
+.contact-info {
+    width: 60%;
+    margin: 35px;
+}
+
+.footer {
+ background-color: rgb(0, 0, 0);
+ text-align: center;
+ color: rgb(183, 150, 245);
+ width: 100%;
+ bottom: 0;
+ left: 0;
+ position: fixed;
+}
+
+body {
+    padding-bottom: 50px;
+}
